@@ -57,6 +57,7 @@ fi
 
 
 echo 'while ! xdotool search --name "Mozilla Firefox";do sleep 1;done ' > afterStart.sh
+echo 'sleep 3' >> afterStart.sh
 echo 'FFW=`xdotool search --name "Mozilla Firefox"`' >> afterStart.sh
 echo 'xdotool windowmove $FFW'" $firefox_X $firefox_Y" >> afterStart.sh
 echo 'xdotool windowsize $FFW'" $firefox_XW $firefox_YW" >> afterStart.sh
