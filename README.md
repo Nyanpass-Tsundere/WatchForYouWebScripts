@@ -9,7 +9,7 @@
 最後再用`xinitrc`取代使用者的`.xinitrc`，`xinitrc`的前40行是從系統的`/etc/X11/xinit/xinitrc`複製過來的，不複製過來滑鼠游標會消失。
 
 ## 使用效果
-
+[請參考影片](https://youtu.be/DIxJvmG4fhg)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DIxJvmG4fhg" frameborder="0" allowfullscreen></iframe>
 
 ## 已知問題
