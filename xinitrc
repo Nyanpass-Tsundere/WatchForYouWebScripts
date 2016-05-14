@@ -47,7 +47,8 @@ if [ "$DEBUG" == "1" ]; then
 	firefox_Y=0
 	firefox_XW=$((${SCREEN_X}-${firefox_X}))
 	firefox_YW=$SCREEN_Y
-	exec xterm -geometry 80x66+0+0 -name login &
+	xterm -geometry 80x66+0+0 &
+	sleep 1
 else
 	firefox_X=0
 	firefox_Y=0
@@ -64,9 +65,10 @@ echo 'sleep 3' >> afterStart.sh
 echo 'FFW=`xdotool search --name "Mozilla Firefox"`' >> afterStart.sh
 echo 'xdotool windowmove $FFW'" $firefox_X $firefox_Y" >> afterStart.sh
 echo 'xdotool windowsize $FFW'" $firefox_XW $firefox_YW" >> afterStart.sh
+## this will force fucus on Firefox ONLY
+#echo 'xdotool windowfocus $FFW' >> afterStart.sh
 echo 'xdotool key F11' >> afterStart.sh
 
 /bin/sh afterStart.sh &
-
 fcitx &
-/tmp/firefox/firefox `cat targetWeb` 
+/tmp/firefox/firefox `cat targetWeb`
