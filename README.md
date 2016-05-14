@@ -7,3 +7,11 @@
 自動登入設定後，將`bashrc`用來取代自動登入使用者的`.bashrc` （如果使用者的預設shell不是bash請記得更換），讓使用者自動登入後就執行`startx`與其他相關指令。自動登入的使用者必須有權限開啟硬體設備並啟動X11環境，目前找到的最快解是加入wheel群組（汗顏）。
 
 最後再用`xinitrc`取代使用者的`.xinitrc`，`xinitrc`的前40行是從系統的`/etc/X11/xinit/xinitrc`複製過來的，不複製過來滑鼠游標會消失。
+
+## 使用效果
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DIxJvmG4fhg" frameborder="0" allowfullscreen></iframe>
+
+## 已知問題
+
+1. Firefox在沒有WM的狀況下，選單叫不出來
