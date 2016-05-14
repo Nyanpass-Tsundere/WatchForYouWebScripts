@@ -8,6 +8,8 @@
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
+LANG=C
+
 echo 'Prepare firefox for faster loading'
 cp -r /usr/lib/firefox /tmp
 
