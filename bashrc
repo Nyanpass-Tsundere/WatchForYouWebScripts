@@ -16,10 +16,12 @@ cp -r /usr/lib/firefox /tmp
 setterm -powersave off
 setterm -powerdown 0
 
-while ! ping -c 1 watching.dd-han.tw;do
+while ! curl `cat targetWeb` > /dev/null ;do
 	echo Waiting for networking......
 	sleep 3
 done
+
+source /etc/locale.conf
 
 while [ "1" ];do
 	startx

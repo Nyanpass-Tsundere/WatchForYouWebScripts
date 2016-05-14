@@ -55,6 +55,9 @@ else
 	firefox_YW=$SCREEN_Y
 fi
 
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
 
 echo 'while ! xdotool search --name "Mozilla Firefox";do sleep 1;done ' > afterStart.sh
 echo 'sleep 3' >> afterStart.sh
@@ -65,4 +68,5 @@ echo 'xdotool key F11' >> afterStart.sh
 
 /bin/sh afterStart.sh &
 
-/tmp/firefox/firefox 'http://watching.dd-han.tw'
+fcitx &
+/tmp/firefox/firefox `cat targetWeb` 
